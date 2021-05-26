@@ -1,0 +1,20 @@
+<div class="container-fluid">
+	<div class="login-container ">
+          <div class="noti-messg"  style="text-align: center; background-color: lightblue;">
+            <span *ngIf="loggedin === true"><b> You are successfully loggedin!</b></span>
+          </div>
+          <div class="noti-messg"  style="text-align: center; background-color: lightblue;">
+            <span *ngIf="error === true"><i class="fa fa-warning text-danger"></i><b> {{message1}}</b></span>
+          </div> 
+            <div id="output"></div>
+            <div class="avatar"></div>
+            <div class="form-box">
+                <form ngNativeValidate #ref="ngForm" (ngSubmit)="onLogin(ref.value)">
+                    <input  type="text" name="username" placeholder="username" class="form-control" ngModel required>
+                    <input type="password" name="password" placeholder="password" class="form-control" ngModel required>
+                    <button class="btn btn-info btn-block login" type="submit">Login</button>
+                </form>
+            </div>
+        </div>
+        
+</div>

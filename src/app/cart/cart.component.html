@@ -1,0 +1,290 @@
+   
+<!--Cart-->
+<div id="Cart" class="fill-height">
+    <br>
+    <!--
+    <h3 style="text-align: center; font-family: Verdana, Geneva, Tahoma, sans-serif; opacity: 0.8; color: black;">Cart</h3><br>
+    -->
+    {{showcart()}}  
+    
+    <div id="demo">
+        <h5 style="text-align: center; color: white;"></h5>
+    </div>
+  
+  <!--
+  
+    <div class="container-fluid">
+      <table id="cart" class="table table-hover table-condensed">
+                <thead>
+                <tr>
+                  <th style="width:50%">Product</th>
+                  <th style="width:10%">Price</th>
+                  <th style="width:8%">Quantity</th>
+                  <th style="width:22%" class="text-center">Subtotal</th>
+                  <th style="width:10%"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let item of arra; let i = index">
+                  <td data-th="Product">
+                    <div class="row">
+                      <div class="col-sm-2 hidden-xs"><img src="" alt="..." class="img-responsive"/></div>
+                      <div class="col-sm-10">
+                        <h4 class="nomargin">{{item}}</h4>
+                        <p>Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet.</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td data-th="Price">$1.99</td>
+                  <td data-th="Quantity">
+                    <input type="number" class="form-control text-center" value="1">
+                  </td>
+                  <td data-th="Subtotal" class="text-center">1.99</td>
+                  <td class="actions" data-th="">
+                    <button class="btn btn-info btn-sm"><i class="fa fa-refresh"></i></button>
+                    <button class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></button>								
+                  </td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr class="visible-xs">
+                  <td class="text-center"><strong>Total 1.99</strong></td>
+                </tr>
+                <tr>
+                  <td><a href="#" class="btn btn-warning"><i class="fa fa-angle-left"></i> Continue Shopping</a></td>
+                  <td colspan="2" class="hidden-xs"></td>
+                  <td class="hidden-xs text-center"><strong>Total $1.99</strong></td>
+                  <td><a href="#" class="btn btn-success btn-block">Checkout <i class="fa fa-angle-right"></i></a></td>
+                </tr>
+              </tfoot>
+            </table>
+    </div>
+  
+    -->
+  
+    <div class="container p-3" *ngIf = "!CheckListCart()">
+      <img class="img-fluid "  src="../../assets/corousel images/img-no-cartitems1.png" alt='no-items' >
+    </div>
+   
+    
+  
+    <button class="clearclass" (click)="ClearCart()"  style="float: left;" *ngIf = "CheckListCart()">
+      ClearCart
+    </button>
+    <button  class="orderclass" type="button" id="button2" [disabled]="clicked"   (click)="requestcart()" *ngIf = "CheckListCart()" style="float: right;" >
+      Order
+    </button>
+    
+  </div>
+  
+  
+  
+  
+  
+  <!-- Modal -->
+  <div id="myModal11" data-backdrop="static" data-keyboard="false" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Payment</h5>
+  
+        </div>
+        <div class="modal-body">
+                <div class="row">
+                  <div class="col-md-12 col-md-offset-4">
+                    <form class="form-horizontal" role="form">
+                      <fieldset>
+              
+                        <!-- Form Name -->
+                        <legend>Address Details</legend>
+              
+                        <!-- Text input-->
+                        <div class="form-group">
+                          <label class="col-sm-2 control-label" for="textinput">Line 1</label>
+                          <div class="col-sm-10">
+                            <input type="text" placeholder="Address Line 1" class="form-control">
+                          </div>
+                        </div>
+              
+                        <!-- Text input-->
+                        <div class="form-group">
+                          <label class="col-sm-2 control-label" for="textinput">Line 2</label>
+                          <div class="col-sm-10">
+                            <input type="text" placeholder="Address Line 2" class="form-control">
+                          </div>
+                        </div>
+              
+                        <!-- Text input-->
+                        <div class="form-group">
+                          <label class="col-sm-2 control-label" for="textinput">City</label>
+                          <div class="col-sm-10">
+                            <input type="text" placeholder="City" class="form-control">
+                          </div>
+                        </div>
+              
+                        <!-- Text input-->
+                        <div class="form-group">
+                          <label class="col-sm-2 control-label" for="textinput">State</label>
+                          <div class="col-sm-4">
+                            <input type="text" placeholder="State" class="form-control">
+                          </div>
+              
+                          <label class="col-sm-2 control-label" for="textinput">Postcode</label>
+                          <div class="col-sm-4">
+                            <input type="text" placeholder="Post Code" class="form-control">
+                          </div>
+                        </div>
+              
+              
+              
+                        <!-- Text input-->
+                        <div class="form-group">
+                          <label class="col-sm-2 control-label" for="textinput">Country</label>
+                          <div class="col-sm-10">
+                            <input type="text" placeholder="Country" class="form-control">
+                          </div>
+                        </div>
+              
+                        <div class="form-group">
+                          <div class="col-sm-offset-2 col-sm-10">
+                            <div class="pull-right">
+                              <button click="clear()" class="btn btn-default">Clear</button>
+                              <button type="submit" click="addressdetails()" class="btn btn-primary">Submit</button>
+                            </div>
+                          </div>
+                        </div>
+              
+                      </fieldset>
+                    </form>
+                  </div><!-- /.col-lg-12 -->
+                </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" click="addressdetails()" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  <!--Modal 2-->
+  <div id="myModa22" data-backdrop="static" data-keyboard="false" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Payment</h5>
+  
+        </div>
+        <div class="modal-body">
+                      <article class="card">
+                  <div class="card-body p-5">
+                  
+                  <ul class="nav bg-light nav-pills rounded nav-fill mb-3" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link active" data-toggle="pill" href="#nav-tab-card">
+                      <i class="fa fa-credit-card"></i> Credit Card</a></li>
+                    <li class="nav-item">
+                      <a class="nav-link" data-toggle="pill" href="#nav-tab-paypal">
+                      <i class="fab fa-paypal"></i>  Paypal</a></li>
+                    <li class="nav-item">
+                      <a class="nav-link" data-toggle="pill" href="#nav-tab-bank">
+                      <i class="fa fa-university"></i>  Bank Transfer</a></li>
+                  </ul>
+                  
+                  <div class="tab-content">
+                  <div class="tab-pane fade show active" id="nav-tab-card">
+                    <p class="alert alert-success">Some text success or error</p>
+                    <form role="form">
+                    <div class="form-group">
+                      <label for="username">Full name (on the card)</label>
+                      <input type="text" class="form-control" name="username" placeholder="" required="">
+                    </div> <!-- form-group.// -->
+                  
+                    <div class="form-group">
+                      <label for="cardNumber">Card number</label>
+                      <div class="input-group">
+                        <input type="text" class="form-control" name="cardNumber" placeholder="">
+                        <div class="input-group-append">
+                          <span class="input-group-text text-muted">
+                            <i class="fab fa-cc-visa"></i>   <i class="fab fa-cc-amex"></i>   
+                            <i class="fab fa-cc-mastercard"></i> 
+                          </span>
+                        </div>
+                      </div>
+                    </div> <!-- form-group.// -->
+                  
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <div class="form-group">
+                                <label><span class="hidden-xs">Expiration</span> </label>
+                              <div class="input-group">
+                                <input type="number" class="form-control" placeholder="MM" name="">
+                                  <input type="number" class="form-control" placeholder="YY" name="">
+                              </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label data-toggle="tooltip" title="" data-original-title="3 digits code on back side of the card">CVV <i class="fa fa-question-circle"></i></label>
+                                <input type="number" class="form-control" required="">
+                            </div> <!-- form-group.// -->
+                        </div>
+                    </div> <!-- row.// -->
+                    <button class="subscribe btn btn-primary btn-block" type="button"> Confirm  </button>
+                    </form>
+                  </div> <!-- tab-pane.// -->
+                  <div class="tab-pane fade" id="nav-tab-paypal">
+                  <p>Paypal is easiest way to pay online</p>
+                  <p>
+                  <button type="button" class="btn btn-primary"> <i class="fab fa-paypal"></i> Log in my Paypal </button>
+                  </p>
+                  <p><strong>Note:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. </p>
+                  </div>
+                  <div class="tab-pane fade" id="nav-tab-bank">
+                  <p>Bank accaunt details</p>
+                  <dl class="param">
+                    <dt>BANK: </dt>
+                    <dd> THE WORLD BANK</dd>
+                  </dl>
+                  <dl class="param">
+                    <dt>Accaunt number: </dt>
+                    <dd> 12345678912345</dd>
+                  </dl>
+                  <dl class="param">
+                    <dt>IBAN: </dt>
+                    <dd> 123456789</dd>
+                  </dl>
+                  <p><strong>Note:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. </p>
+                  </div> <!-- tab-pane.// -->
+                  </div> <!-- tab-content .// -->
+                  
+                  </div> <!-- card-body.// -->
+                      </article> 
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+
+  <ngx-spinner
+  bdColor="rgba(51,51,51,0.8)"
+  size="medium"
+  color="#fff"
+  type="ball-scale-multiple"
+>
+  <p style="font-size: 20px; color: white">Loading...</p>
+</ngx-spinner>
+
+
+  
+  <br><br><br>

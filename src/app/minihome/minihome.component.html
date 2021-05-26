@@ -1,0 +1,306 @@
+            <!--jumbotron-->
+                      
+            <div class="container-fluid" style="padding: 0%; margin-bottom: 5%;" >
+                <img  src="../../assets/men images/homebg.png" alt="">
+             </div>
+       
+ 
+ 
+ 
+   <!--Today's Deal-->
+   <section class="section-tours ">
+             <div class=" text-center  u-margin-bottom-medium">
+                 <br>  <br>  <h4 class="heading-secondary">
+                     Most Popular 
+                 </h4>
+                   
+             </div>
+             <div class="row">
+                 <div class=" col-sm-6  col-xs-6 p-5">
+                     <div class="card Tc">
+                         <div class="card__side card__side--front">
+                             <div class="card__picture card__picture--1">
+                                  
+                             </div>
+      
+                             
+                         </div>
+                         <div class="card__side card__side--back card__side--back-1">
+                             <div class="card__cta">
+                                 <div class="card__price-box">
+                                     
+                                     <p class="card__price-value">$295</p>
+                                     <h3 class="Tdh">Black Suit For Men</h3>
+                                     <h6>(M)</h6>
+                                 </div>
+                                 <button  class="btn card_btn" (click)="addToCart($event);" data-img="../../assets/Todays deal/T1.jpg" data-name="Black Suit For Men" data-price="295" data-size="Medium" class="btn card_btn">Add Now</button>
+                               </div>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="col-sm-6 col-xs-6 p-5">
+                     <div class="card Tc">
+                         <div class="card__side card__side--front">
+                             <div class="card__picture card__picture--2">
+                                  
+                             </div>
+ 
+                         </div>
+                         <div class="card__side card__side--back card__side--back-2">
+                             <div class="card__cta">
+                                 <div class="card__price-box">
+                                     
+                                     <p class="card__price-value">$290</p>
+                                     <h3 class="Tdh">Panache women stylish rayon peach maxi dress</h3>
+                                     <h6>(M)</h6>
+                                 </div>
+                                 <button  class="btn card_btn" (click)="addToCart($event);" data-img="../../assets/Todays deal/T2.jpg" data-name="Panache women stylish dress " data-price="290" data-size="Medium"  class="btn card_btn">Add Now</button>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+ 
+                 
+ 
+             </div>
+             
+   </section>
+ 
+   
+ 
+ 
+   <div class="container-fluid" style="padding: 0%; margin-bottom: 5%;" >
+     <img (click)="opencomponent($event)" data-name="Men"  src="../../assets/Men/homebg2.jpg" alt="">
+  </div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+     <!--Men-->
+     <!--Top-Ware-->
+   <div class="main p-3">
+       <h1 style="text-align: center; ">Men: Topwear</h1>
+       <ul class="cards">
+         <li class="cards_item col-md-3 col-sm-6 col-6">
+           <div class="card">
+             <div class="card_image" ><img (click)="viewTopware($event)" data-name="White Cherckerd Casual Shirt" data-price="750" src="../../assets/Men/1.White Cherckerd Casual Shirt.jpg" data-per="90" ></div>
+             <div class="card_content">
+               <h2 class="card_title">White Check..<span>₹750</span></h2>
+               <p class="card_text">White Check Casual Shirt</p>
+             </div>
+           </div>
+         </li>
+         <li class="cards_item col-md-3 col-sm-6 col-6">
+           <div class="card">
+             <div class="card_image"><img (click)="viewTopware($event)" data-name="Men Pink Regular Shirt" data-price="640" src="../../assets/Men/2.Men Pink Regular Fit Formal Shirt.jpg" data-per="95"></div>
+             <div class="card_content">
+               <h2 class="card_title">Men Regular..<span>₹640</span></h2>
+               <p class="card_text">Men Pink Regular Shirt</p>
+             </div>
+           </div>
+         </li>
+         <li class="cards_item col-md-3 col-sm-6 col-6">
+           <div class="card">
+             <div class="card_image" ><img (click)="viewTopware($event)" data-name="All Primero Blue Shirt" data-price="500" src="../../assets/Men/6.All Primero Blue Casual Shirt.jpg" data-per="98" ></div>
+             <div class="card_content">
+               <h2 class="card_title">All Primero..<span>₹500</span></h2>
+               <p class="card_text">All Primero Blue Shirt</p>
+             </div>
+           </div>
+         </li>
+         <li class="cards_item col-md-3 col-sm-6 col-6">
+           <div class="card">
+             <div class="card_image"><img (click)="viewTopware($event)" data-name="Men White Regulat Shirt" data-price="810" src="../../assets/Men/3.Men White Regulat Fit Formal Shirt.jpg" data-per="90"></div>
+             <div class="card_content">
+               <h2 class="card_title">Men White..<span>₹810</span></h2>
+               <p class="card_text">Men White Regulat Shirt</p>
+             </div>
+           </div>
+         </li>
+       </ul>
+       <p style="float: right;" (click)="opencomponent($event)" data-name="Men" >More..</p>
+   </div>
+ 
+   <br>
+   <br>
+ 
+ 
+   <div class="container-fluid" style="padding: 0%; margin-bottom: 5%;" >
+     <img (click)="opencomponent($event)" data-name="Women"  src="../../assets/Men/womenpantsbg1.jpg" alt="">
+  </div>
+ 
+   <!--Women-->
+   <div class="main p-3">
+     <h1 style="text-align: center; ">Women: Topwear</h1>
+     <ul class="cards">
+       <li class="cards_item col-md-3 col-sm-6 col-6">
+         <div class="card">
+           <div class="card_image"><img (click)="viewTopware($event)" data-name="Women Checkered Top Shirt" data-price="750"  data-per="86"  src="../../assets/women images/Women Checkered Top Shirt(1).jpg"></div>
+           <div class="card_content">
+             <h2 class="card_title">Women Check..<span >₹750</span></h2>
+             <p class="card_text">Women Check Top Shirt</p>
+           </div>
+         </div>
+       </li>
+       <li class="cards_item col-md-3 col-sm-6 col-6">
+         <div class="card">
+           <div class="card_image"><img (click)="viewTopware($event)" data-name="Peach Casual Printed Shirt" data-price="650"  data-per="91"  src="../../assets/women images/Peach Casual Printed Shirt(2).jpg"></div>
+           <div class="card_content">
+             <h2 class="card_title">Peach Casual..<span >₹650</span></h2>
+             <p class="card_text">Peach Casual Printed Shirt</p>
+           </div>
+         </div>
+       </li>
+       <li class="cards_item col-md-3 col-sm-6 col-6">
+         <div class="card">
+           <div class="card_image"><img (click)="viewTopware($event)" data-name="Round Neck Black Top" data-price="900"  data-per="98"  src="../../assets/women images/Round Neck Black Top(3).jpg"></div>
+           <div class="card_content">
+             <h2 class="card_title">Round Neck..<span >₹900</span></h2>
+             <p class="card_text">Round Neck Black Top</p>
+           </div>
+         </div>
+       </li>
+       <li class="cards_item col-md-3 col-sm-6 col-6">
+         <div class="card">
+           <div class="card_image"><img (click)="viewTopware($event)" data-name="Beige solid Shrug" data-price="880"  data-per="87"  src="../../assets/women images/Beige solid Shrug(5).jpg"></div>
+           <div class="card_content">
+             <h2 class="card_title">Beige Shrug..<span >₹880</span></h2>
+             <p class="card_text">Beige solid Shrug</p>
+           </div>
+         </div>
+       </li>
+     </ul>
+     <p style="float: right;" (click)="opencomponent($event)" data-name="Women" >More..</p>
+   </div>
+ 
+ 
+ 
+   <br>
+   <br>
+ 
+ 
+   <div class="container-fluid" style="padding: 0%; margin-bottom: 5%;" >
+     <img  (click)="opencomponent($event)" data-name="kids" src="../../assets/Men/kidshomebg.png" alt="">
+  </div>
+ 
+   <!--kids-->
+   <!--Boys-->
+   <div class="main p-3">
+     <h1 style="text-align: center; ">Boys: Collections</h1>
+     <ul class="cards">
+       <li class="cards_item col-md-3 col-sm-6 col-6">
+         <div class="card">
+           <div class="card_image"><img (click)="viewTopware2($event)" data-name="Fayon Kids Printed Kurta" data-price="840"  src="../../assets/kids images/Fayon Kids Printed Kurta(4).jpg" data-per="96"></div>
+           <div class="card_content">
+             <h2 class="card_title">Printed Kurta..<span>₹840</span></h2>
+             <p class="card_text">Fayon Kids Printed Kurta</p>
+           </div>
+         </div>
+       </li>
+       <li class="cards_item col-md-3 col-sm-6 col-6">
+         <div class="card">
+           <div class="card_image"><img (click)="viewTopware2($event)" data-name="Fayon Kids Blue Kurta" data-price="770"  src="../../assets/kids images/Fayon Kids Blue Kurta(5).jpg" data-per="90"></div>
+           <div class="card_content">
+             <h2 class="card_title">Blue Kurta..<span>₹770</span></h2>
+             <p class="card_text">Fayon Kids Blue Kurta</p>
+           </div>
+         </div>
+       </li>
+       <li class="cards_item col-md-3 col-sm-6 col-6">
+         <div class="card">
+           <div class="card_image"><img (click)="viewTopware2($event)" data-name="Fayon Kids Burgundy Jacket" data-price="590"  src="../../assets/kids images//Fayon Kids Burgundy Jacket(6).jpg" data-per="83"></div>
+           <div class="card_content">
+             <h2 class="card_title">Fayon Kids..<span>₹590</span></h2>
+             <p class="card_text">Fayon Kids Burgundy Jacket</p>
+           </div>
+         </div>
+       </li>
+       <li class="cards_item col-md-3 col-sm-6 col-6">
+         <div class="card">
+           <div class="card_image"><img (click)="viewTopware2($event)" data-name="Stylish Black&Pink Dress" data-price="880"  src="../../assets/kids images/Stylish Black&Pink Dress(9).jpg" data-per="91"></div>
+           <div class="card_content">
+             <h2 class="card_title">Black&Pink..<span>₹880</span></h2>
+             <p class="card_text">Stylish Black&Pink Dress</p>
+           </div>
+         </div>
+       </li>
+     </ul>
+     <p style="float: right;" (click)="opencomponent($event)" data-name="kids" >More..</p>
+   </div>
+ 
+   <br>
+   <br>
+ 
+   <div class="container-fluid" style="padding: 0%; margin-bottom: 5%;" >
+     <img (click)="opencomponent($event)" data-name="Handbags"  src="../../assets/Men/handbagbg3.jpg" alt="">
+  </div>
+ 
+   
+   <!--Handbags For Women-->
+   <div class="main p-3">
+     <h1 style="text-align: center; ">Women: Handbags</h1>
+     <ul class="cards">
+       <li class="cards_item col-md-3 col-sm-6 col-6">
+         <div class="card">
+           <div class="card_image"><img (click)="viewTopware2($event)" data-name="Sling Bag With Strap" data-price="440" src="../../assets/Watches/1.Sling Bag With Strap.webp" data-per="98"></div>
+           <div class="card_content">
+             <h2 class="card_title">Sling Bag..</h2>
+             <p class="card_text">Sling Bag With Strap</p>
+           </div>
+         </div>
+       </li>
+       <li class="cards_item col-md-3 col-sm-6 col-6">
+         <div class="card">
+           <div class="card_image"><img (click)="viewTopware2($event)" data-name="Textures Sling Bag" data-price="440" src="../../assets/Watches/3.Textures Sling Bag.webp" data-per="99"></div>
+           <div class="card_content">
+             <h2 class="card_title">Textures Sling..</h2>
+             <p class="card_text">Textures Sling Bag</p>
+           </div>
+         </div>
+       </li>
+       <li class="cards_item col-md-3 col-sm-6 col-6">
+         <div class="card">
+           <div class="card_image"><img (click)="viewTopware2($event)" data-name="StripedTote Bag With Strap" data-price="440" src="../../assets/Watches/2.StripedTote Bag With Strap.webp" data-per="96"></div>
+           <div class="card_content">
+             <h2 class="card_title">StripedTote..</h2>
+             <p class="card_text">StripedTote Bag With Strap</p>
+           </div>
+         </div>
+       </li>
+       <li class="cards_item col-md-3 col-sm-6 col-6">
+         <div class="card">
+           <div class="card_image"><img (click)="viewTopware2($event)" data-name="Woven Jute Shoulder Bag" data-price="440" src="../../assets/Watches/6.Woven Jute Shoulder Bag.jpg" data-per="95"></div>
+           <div class="card_content">
+             <h2 class="card_title">Woven Jute..</h2>
+             <p class="card_text">Woven Jute Shoulder Bag</p>
+           </div>
+         </div>
+       </li>
+     </ul>
+     <p style="float: right;" (click)="opencomponent($event)" data-name="Handbags" >More..</p>
+   </div>
+ 
+ 
+ 
+ 
+ 
+ 
+   <h3 class="made_by">Made with ♡</h3>
+ 
+ 
+   
+
+   <button id="myBtn" (click)="gotoup()"><i style="color: black;" class="fa fa-chevron-circle-up"></i></button>
+
+
+
+
+
+   <div  class="noti-messg" id="myModal"  style="text-align: center; background-color: lightblue;">
+    <span ><b>{{message}}</b></span>
+  </div>
+  
